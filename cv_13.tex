@@ -1,0 +1,210 @@
+% -*- program: xelatex -*-
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wilson Resume/CV
+% XeLaTeX Template
+% Version 1.0 (22/1/2015)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Howard Wilson (https://github.com/watsonbox/cv_template_2004) with
+% extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Default font size
+
+\input{structure.tex} % Include the file specifying document layout
+\hfuzz=20pt
+\vfuzz=29pt
+\hbadness=20000
+\vbadness=\maxdimen
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Mark Arts -- Resume} % Print the main header
+
+%------------------------------------------------
+
+\parbox{0.5\textwidth}{ % First block
+\begin{tabbing} % Enables tabbing
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{\bf Address} \> Djeddalaan 108,\\ % Address line 1
+\> Rotterdam, 3067MT \\ % Address line 2
+{\bf Date of Birth} \> 6$^{th}$ April 1993 \\ % Date of birth 
+{\bf Nationality} \> Dutch \\% Nationality
+{\bf Mobile Phone} \> +31627139646 \\ % Mobile phone
+{\bf Email} \> \href{mailto:marktarts93@gmail.com}{marktarts93@gmail.com} \\ % Email address
+\end{tabbing}}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL PROFILE
+%----------------------------------------------------------------------------------------
+
+\section{Personal Profile}
+
+An passionate and curious programmer seeking a developer position where he can utilize and learn the latest technologies en tools. 
+
+During my bachelor I successfully combined my studies with work and learned not only how to quickly build small projects but also what it means to write in an professional context. Trying to keep myself challenged I learned various languages, with a focus on functional programming. Next to web-development I enjoy reading and learning about Artificial Intelligence, Operating systems, Game development, Blockchains and other software related subjects.
+
+I'm a fast learner that can't wait to put his theoretical knowledge in practice.
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\tabbedblock{
+  \bf{2010-2016} \> BSc in Media Technology - \href{https://www.rotterdamuas.com}{Rotterdam University of Applied Sciences} \\[5pt]
+  \>Minor in Game Design and Development
+}
+
+%------------------------------------------------
+
+\tabbedblock{
+  \bf{2005-2010} \> Higher General Secondary Education - Emmauscollege, Rotterdam\\[5pt]
+}
+
+%----------------------------------------------------------------------------------------
+%	EMPLOYMENT HISTORY SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Employment History}
+
+\job
+{Feb 2016 -}{Jun 2016}
+{DPI, Den Haag, Netherlands}
+{http://www.dpi.com}
+{Graduation Internship}
+{I researched the possibility for 3D studio's to create interactive VR stories without the need of a programmer in the Unreal Engine utilizing its visual scripting system Blueprints.\\
+\rule{0mm}{5mm}\textbf{Technologies:} Unreal Engine 4, Blueprints, C++, Virtual Reality}
+
+%------------------------------------------------
+
+\job
+{Feb 2013 -}{Feb 2016}
+{Hoppinger, Rotterdam, Netherlands}
+{http://www.hoppinger.com}
+{Internship / working student}
+{After my internship at Hoppinger I stayed to reinforce the service and support team. As a service and support member I was responsible for the maintenance and small feature requests for Wordpress, Rails and Drupal projects. When I was available full-time, for example vacations, I worked on building bigger projects.
+
+\rule{0mm}{5mm}\textbf{Technologies:} PHP, Ruby, Javascript, Sass, Less, Python, Erb, Haml, Wordpress. Ruby on Rails, NodeJS, Puppet, Drupal, Gulp, Drush, Composer, NGINX, Apache, Git, Polymer, React, MySQL, PostgreSQL, Elasticsearch
+}
+
+\job
+{Jul 2012 -}{Aug 2012}
+{Unitas, Rotterdam, Netherlands}
+{http://www.unitas.nl}
+{Junior Developer}
+{In the summer after the second year of my bachelor I worked for a company that created a software package to submit import and export request to the dutch customs.
+
+\rule{0mm}{5mm}\textbf{Technologies:} WinDev, EDIFACT
+}
+
+%----------------------------------------------------------------------------------------
+%	IT/COMPUTING SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Software Engineering Skills}
+
+\skillgroup{Programming Languages in production}
+{
+\textit{Ruby}\\
+\textit{PHP}\\
+\textit{C++}\\
+\textit{Python} - server scripts\\
+\textit{Javascript/NodeJs}\\
+}
+
+\skillgroup{Programming Languages in hobby projects}
+{
+  \textit{Haskell}\\
+  \textit{C\#}\\
+  \textit{Java}\\
+  \textit{Lisp}\\
+  \textit{Actionscript}\\
+  \textit{Lua} \\
+  \textit{Clojure}\\
+  \textit{Go}\\
+}
+
+%------------------------------------------------
+
+\skillgroup{Web Development}
+{
+\textit{HTML5, HAML, ERB, CSS3/SASS/LESS}\\
+\textit{Ruby on Rails, Wordpress, Drupal}\\
+\textit{Apache/Nginx Web Servers}\\
+\textit{React, Polymer}
+}
+
+%------------------------------------------------
+
+\skillgroup{Miscellaneous}
+{
+\textit{Puppet}\\
+\textit{Gulp/Grunt}\\
+\textit{git}\\
+\textit{NixOS/Docker}\\
+\textit{Browser-sync}
+}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\interestsgroup{
+\interest{Running, Cycling}
+\interest{Music, Composing, Producing, Piano, Accordion}
+\interest{Movies}
+\interest{Games}
+\interest{Books, Mangas}
+}
+
+%----------------------------------------------------------------------------------------
+%	REFEREE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Referees}
+
+%\parbox{0.5\textwidth}{ % First block
+\begin{tabbing}
+\hspace{2.75cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{\bf Name} \> Cies Breijs\\ % Referee name
+{\bf Company} \> Hoppinger \\ % Referee company
+{\bf Position} \>  Chief Technology\\ % Referee job title 
+{\bf Contact} \> \href{mailto:robert@hoppinger.com}{robert@hoppinger.com} % Referee contact information
+\end{tabbing}}
+%\hfill % Horizontal space between the two blocks
+%\parbox{0.5\textwidth}{ % Second block
+%\begin{tabbing}
+%\hspace{2.75cm} \= \hspace{4cm} \= \kill % Spacing within the block
+%{\bf Name} \> Michael "Big Mike" Tucker\\ % Referee name
+%{\bf Company} \> Burbank Buy More \\ % Referee company
+%{\bf Position} \> Store Manager \\ % Referee job title 
+%{\bf Contact} \> \href{mailto:mike@buymore.com}{mike@buymore.com} % Referee contact information
+%\end{tabbing}}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
