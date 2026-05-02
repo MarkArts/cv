@@ -1,4 +1,4 @@
-name: Build LaTeX and publish PDF
+name: Build and commit cv.pdf
 
 on:
   push:
@@ -13,19 +13,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Compile cv.tex
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
-      - name: Publish PDF to latest release
+      - name: Commit updated cv.pdf
         if: github.event_name != 'pull_request'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: latest
-          name: Latest CV PDF
-          prerelease: false
-          files: cv.pdf
-          body: |
-            Built from ${{ github.sha }} at ${{ github.event.head_commit.timestamp }}
+        run: |
+          if git diff --quiet -- cv.pdf; then
+            echo "cv.pdf unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv.pdf
+          git commit -m "Auto-build cv.pdf [skip ci]"
+          git push
