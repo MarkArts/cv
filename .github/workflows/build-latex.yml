@@ -1,0 +1,31 @@
+name: Build LaTeX and publish PDF
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile cv.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          latexmk_use_xelatex: true
+      - name: Publish PDF to latest release
+        if: github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV PDF
+          prerelease: false
+          files: cv.pdf
+          body: |
+            Built from ${{ github.sha }} at ${{ github.event.head_commit.timestamp }}
